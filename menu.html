@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+  color: #fff;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 80px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* LOGO */
+header h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 28px;
+}
+
+/* NAV LINKS */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ddd;
+    transition: .3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #c89b6d;
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 20px;
+    background: #c89b6d;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a87e55;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    padding:40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b0b0b;
+  color: #fff;
+  padding-top: 90px;
+}
+
+
+
+/* GRID */
+
+.menu-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* CARD */
+
+.menu-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-8px);
+    border-color:#ffffff;
+}
+
+/* IMAGE */
+
+.menu-card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+
+.content{
+    padding:20px;
+}
+
+.category{
+    font-size:22px;
+    color:#ffffff;
+    margin-bottom:15px;
+}
+
+/* ITEM */
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    font-size:14px;
+}
+
+.menu-item:last-child{
+    border:none;
+}
+
+.price{
+    color:#ffffff;
+    font-weight:600;
+}
+/* LOADER OVERLAY */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+/* SHOW LOADER */
+#loader.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SPINNER */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255,255,255,0.2);
+  border-top: 5px solid #c89b6d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loader p {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+</style>
+</head>
+<body>
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+<header>
+  <h2>Heart Treat Brew Cafe</h2>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="ordernow.html" class="btn">Order Now</a>
+</header>
+
+<div class="menu-container">
+
+    <!-- ESPRESSO -->
+    <a href="ordernow.html" class="menu-link">   
+        <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" />
+        <div class="content">
+            <div class="category">Espresso Based</div>
+
+            <div class="menu-item"><span>Espresso</span><span class="price">₱90</span></div>
+            <div class="menu-item"><span>Americano</span><span class="price">₱110</span></div>
+            <div class="menu-item"><span>Ristretto</span><span class="price">₱100</span></div>
+            <div class="menu-item"><span>Double Espresso - 140</span><span class="price">₱140</span></div>
+            <div class="menu-item"><span>Flavored Latte</span><span class="price">₱150</span></div>
+            <div class="menu-item"><span>Mochacino</span><span class="price">₱130</span></div>
+        </div>
+    </div></a>
+
+
+    <!-- HOT -->
+    <a href="ordernow.html" class="menu-link">
+            <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" />
+        <div class="content">
+            <div class="category">Hot Drinks</div>
+
+            <div class="menu-item"><span>Hot Latte</span><span class="price">₱130</span></div>
+            <div class="menu-item"><span>Hot Americano</span><span class="price">₱110</span></div>
+            <div class="menu-item"><span>Hot Spanish Latte</span><span class="price">₱150</span></div>
+            <div class="menu-item"><span>Hot Caramel Macchiato</span><span class="price">₱160</span></div>
+            <div class="menu-item"><span>Hot Cappuccino</span><span class="price">₱130</span></div>
+            <div class="menu-item"><span>Hot Choco</span><span class="price">₱120</span></div>
+        </div>
+    </div>
+    </a>
+
+
+    <!-- MILK -->
+    <a href="ordernow.html" class="menu-link">
+            <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5" />
+        <div class="content">
+            <div class="category">Milk Based</div>
+
+            <div class="menu-item"><span>Cream Cheese</span><span class="price">₱140</span></div>
+            <div class="menu-item"><span>Cappuccino</span><span class="price">₱130</span></div>
+            <div class="menu-item"><span>Cafe Latte</span><span class="price">₱150</span></div>
+            <div class="menu-item"><span>Latte Macchiato</span><span class="price">₱165</span></div>
+            <div class="menu-item"><span>Espresso Macchiato</span><span class="price">₱175</span></div>
+            <div class="menu-item"><span>Flat White</span><span class="price">₱145</span></div>
+        </div>
+    </div>
+    </a>
+        <!-- Cake -->
+    <a href="ordernow.html" class="menu-link">
+            <div class="menu-card">
+        <img src="https://scontent.fmnl25-7.fna.fbcdn.net/v/t51.75761-15/497098288_18498192481056402_3956540911663113575_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGzYUveK8ygn_cCiGE6h9TrK5ZwoLbRz3ArlnCgttHPcP1ziT2fandHAm6jT7xj-I7kh61jJjLvhNZgywuAMBo5&_nc_ohc=qGOtKVgVnccQ7kNvwEi8QMn&_nc_oc=AdpWVAmM8xYFztS4ttmosacYEtop018oqxDss4DjK0wPasogGc5gmh3KliKnIU9DjF8&_nc_zt=23&_nc_ht=scontent.fmnl25-7.fna&_nc_gid=yjCeNQ2pokiS2iar6v96KA&_nc_ss=7b2a8&oh=00_Af7tQGfcrBwtBe3eYF2bFblaiuGLeX_xjKaB-Z5NROYg7g&oe=6A164EF2" />
+        <div class="content">
+            <div class="category">Cake</div>
+
+            <div class="menu-item"><span>Mocha</span><span class="price">₱40</span></div>
+            <div class="menu-item"><span>Green Tea</span><span class="price">₱50</span></div>
+            <div class="menu-item"><span>Vanilla</span><span class="price">₱50</span></div>
+            <div class="menu-item"><span>Strawberry</span><span class="price">₱40</span></div>
+            <div class="menu-item"><span>Choco Chip</span><span class="price">₱50</span></div>
+        </div>
+    </div>
+    </a>
+    <!-- SIGNATURE -->
+    <a href="ordernow.html" class="menu-link">
+            <div class="menu-card">
+        <img src="https://perfectdailygrind.com/wp-content/uploads/2024/02/signature-drink-1024x640.jpeg" />
+        <div class="content">
+            <div class="category">Signature Drinks</div>
+
+            <div class="menu-item"><span>Caramel Macchiato</span><span class="price">₱150</span></div>
+            <div class="menu-item"><span>Spanish Latte</span><span class="price">₱160</span></div>
+            <div class="menu-item"><span>Mocha</span><span class="price">₱150</span></div>
+        </div>
+    </div>
+    </a>
+
+
+    <!-- COLD -->
+    <a href="ordernow.html" class="menu-link">
+            <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80" />
+        <div class="content">
+            <div class="category">Cold Drinks</div>
+
+            <div class="menu-item"><span>Iced Latte</span><span class="price">₱140</span></div>
+            <div class="menu-item"><span>Iced Brew</span><span class="price">₱150</span></div>
+            <div class="menu-item"><span>Iced Mocha</span><span class="price">₱150</span></div>
+            <div class="menu-item"><span>Iced Americano</span><span class="price">₱120</span></div>
+            <div class="menu-item"><span>Iced Spanish Latte</span><span class="price">₱170</span></div>
+            <div class="menu-item"><span>Iced Tiramisu Latte</span><span class="price">₱250</span></div>
+        </div>
+    </div>
+    </a>
+
+
+</div>
+<script>
+const loader = document.getElementById("loader");
+
+// show loader on link click
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    // ignore empty or external links if you want
+    if (!href || href.startsWith("#")) return;
+
+    e.preventDefault();
+    loader.classList.add("show");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 800); // loading time
+  });
+});
+
+// hide loader when page loads
+window.addEventListener("load", () => {
+  loader.classList.remove("show");
+});
+</script>
+</body>
+</html>

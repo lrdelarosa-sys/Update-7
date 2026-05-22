@@ -1,0 +1,624 @@
+<body>
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="YTDown_YouTube_Coffee-shop-promo-video-Sony-a7III-with-_Media_bNbada12iM_001_1080p.mp4" type="video/mp4">
+</video>
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+<!-- NAVBAR -->
+<header>
+  <h2>Heart Treat Brew Cafe</h2>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+  <a href="ordernow.html" class="btn">Order Now</a>
+</header>
+
+<div class="ios26-wrapper">
+
+  <!-- AMBIENT LIGHT -->
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+
+  <!-- IOS 26 GLASS PANEL -->
+  <div class="ios26-card">
+
+    <!-- SPECULAR HIGHLIGHT -->
+    <div class="specular"></div>
+
+    <!-- NOISE -->
+    <div class="noise"></div>
+
+    <h3>Visit Our Coffee Shop</h3>
+
+    <div class="row">
+      <span>📍</span>
+      <div>
+        <p class="title">Brew Haven Café</p>
+        <p>25 Maginhawa Street, Diliman, Quezon City</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span>☎</span>
+      <div>
+        <p>+63 917 456 7890</p>
+        <p>+63 945 234 6090</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span>✉</span>
+      <div>
+        <p>HeartTreatbrewCafe@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span>🕒</span>
+      <div>
+        <p>Monday - Sunday</p>
+        <p>8:00 AM - 11:00 PM</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span>🌐</span>
+      <div>
+        <p>www.hearttreatbrewcafe.com</p>
+      </div>
+    </div>
+
+    <!-- IOS STYLE BUTTONS -->
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=61574501753547&sk=following">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ===== NAVBAR ===== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 80px;
+
+    background:rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    z-index:9999;
+    
+}
+
+header h2{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+nav a{
+    margin:0 15px;
+
+    text-decoration:none;
+
+    color:#ddd;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#c89b6d;
+}
+
+/* BUTTON */
+
+.btn{
+    padding:10px 20px;
+    background:#c89b6d;
+    color:white;
+
+    border-radius:30px;
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+    border:none;
+}
+
+.btn:hover{
+    background:#a87e55;
+    transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+/* ===== IOS 26 LIQUID GLASS ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:120px;
+    overflow:hidden;
+    font-family:-apple-system,BlinkMacSystemFont,
+    "SF Pro Display","Poppins",sans-serif;
+
+    background:
+    radial-gradient(circle at top left,
+    #6f4e37 0%,
+    transparent 25%),
+
+    radial-gradient(circle at bottom right,
+    #2d1b14 0%,
+    transparent 30%),
+
+    linear-gradient(
+    160deg,
+    #0f0f10,
+    #161617,
+    #1f2023
+    );
+
+    color:white;
+}
+
+/* ===== WRAPPER ===== */
+
+.ios26-wrapper{
+    position:relative;
+    width:100%;
+    max-width:520px;
+    padding:24px;
+}
+
+/* ===== FLOATING LIGHT BLOBS ===== */
+
+.ambient{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.45;
+    z-index:0;
+}
+
+.ambient-1{
+    width:240px;
+    height:240px;
+    background:#ffb37a;
+
+    top:-80px;
+    left:-100px;
+}
+
+.ambient-2{
+    width:220px;
+    height:220px;
+    background:#8b5e3c;
+
+    right:-90px;
+    bottom:-90px;
+}
+
+/* ===== MAIN GLASS ===== */
+
+.ios26-card{
+
+    position:relative;
+    z-index:2;
+
+    padding:34px;
+
+    border-radius:38px;
+
+    overflow:hidden;
+
+    /* IOS LIQUID GLASS */
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.16),
+        rgba(255,255,255,0.03)
+    );
+
+    backdrop-filter:
+    blur(32px)
+    saturate(180%)
+    brightness(1.15);
+
+    -webkit-backdrop-filter:
+    blur(32px)
+    saturate(180%)
+    brightness(1.15);
+
+    border:
+    1px solid rgba(255,255,255,0.14);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35),
+
+    inset 0 1px 0 rgba(255,255,255,.22),
+
+    inset 0 -1px 0 rgba(255,255,255,.04),
+
+    inset 0 0 18px rgba(255,255,255,.03);
+
+    transition:.4s ease;
+}
+/* LOADER OVERLAY */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+/* SHOW LOADER */
+#loader.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SPINNER */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255,255,255,0.2);
+  border-top: 5px solid #c89b6d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loader p {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ===== REAL IOS DEPTH ===== */
+
+.ios26-card::before{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    border-radius:38px;
+
+    padding:1px;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.35),
+    rgba(255,255,255,.02)
+    );
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+
+    pointer-events:none;
+}
+
+/* ===== SPECULAR LIGHT ===== */
+
+.specular{
+    position:absolute;
+
+    top:-120px;
+    left:-40px;
+
+    width:180%;
+    height:220px;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(255,255,255,.35),
+    rgba(255,255,255,.06),
+    transparent
+    );
+
+    transform:rotate(-8deg);
+
+    opacity:.9;
+
+    pointer-events:none;
+}
+
+/* ===== MICRO NOISE ===== */
+
+.noise{
+    position:absolute;
+    inset:0;
+
+    opacity:.035;
+
+    background-image:
+    radial-gradient(#fff 0.5px, transparent 0.5px);
+
+    background-size:4px 4px;
+
+    mix-blend-mode:overlay;
+
+    pointer-events:none;
+}
+
+/* ===== TITLE ===== */
+
+h3{
+    font-size:30px;
+    font-weight:700;
+
+    margin-bottom:28px;
+
+    letter-spacing:-0.5px;
+
+    color:rgba(255,255,255,.96);
+
+    text-shadow:
+    0 2px 12px rgba(255,255,255,.08);
+}
+
+/* ===== ROWS ===== */
+
+.row{
+    display:flex;
+    gap:16px;
+
+    margin-bottom:22px;
+
+    align-items:flex-start;
+}
+
+.row span{
+    font-size:20px;
+    opacity:.9;
+}
+
+.row p{
+    color:rgba(255,255,255,.88);
+
+    line-height:1.6;
+
+    font-size:15px;
+}
+
+.title{
+    font-weight:600;
+    color:white;
+}
+
+/* ===== IOS 26 BUTTONS ===== */
+
+.socials{
+    display:flex;
+    gap:12px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+}
+
+.socials a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:14px;
+    font-weight:500;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.18),
+    rgba(255,255,255,.06)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    0 4px 12px rgba(0,0,0,.18);
+
+    transition:.25s ease;
+}
+
+/* IOS HOVER */
+
+.socials a:hover{
+
+    transform:
+    translateY(-2px)
+    scale(1.02);
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.24),
+    rgba(255,255,255,.1)
+    );
+}
+
+/* ===== FLOATING MOTION ===== */
+
+@keyframes liquid{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -1; /* sends it to the back */
+}
+.ios26-card{
+    animation:liquid 7s ease-in-out infinite;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.55);
+
+    z-index: -1;
+}
+/* ===== MOBILE ===== */
+
+@media(max-width:600px){
+
+    .ios26-card{
+        padding:28px;
+        border-radius:30px;
+    }
+
+    h3{
+        font-size:24px;
+    }
+
+}
+#bg-video{
+    position: fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-2;
+}
+
+/* DARK OVERLAY */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.65)
+    );
+
+    z-index:-1;
+}
+</style>
+<script>
+const loader = document.getElementById("loader");
+
+// show loader on link click
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    // ignore empty or external links if you want
+    if (!href || href.startsWith("#")) return;
+
+    e.preventDefault();
+    loader.classList.add("show");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 800); // loading time
+  });
+});
+
+// hide loader when page loads
+window.addEventListener("load", () => {
+  loader.classList.remove("show");
+});
+</script>
+</body>

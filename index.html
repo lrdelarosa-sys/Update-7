@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTBC Coffee Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins..." />
+</head>
+<script src="script.js"></script>
+<body>
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+<header>
+  <h2>Heart Treat Brew Cafe</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="ordernow.html" class="btn">Order Now</a>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Heart Treat Brew Cafe</h1>
+    <h2>Best coffee experience in town</h2>
+
+    <div class="hero-buttons">
+      <a href="menu.html" class="btn">View Menu</a>
+    </div>
+
+    <div class="stats">
+      <div>17+<br/>Years Experience</div>
+      <div>03<br/>Branches</div>
+      <div>14+<br/>Awards</div>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="Coffee.png" alt="coffee" />
+  </div>
+</section>
+
+<section class="section">
+  <h3>Our Best Seller Menu</h3>
+  <div class="cards">
+    <div class="card">
+      <h3>Espresso</h3>
+      <img src="https://static.vecteezy.com/system/resources/previews/023/438/448/large_2x/espresso-coffee-cutout-free-png.png" alt="espresso" style="width:100%; border-radius:10px; margin:10px 0;">
+      <p>Strong and bold coffee shot.</p>
+    </div>
+    <div class="card">
+      <h3>Cappuccino</h3>
+      <img src="https://static.vecteezy.com/system/resources/previews/027/308/934/original/cappuccino-with-ai-generated-free-png.png" alt="cappuccino" style="width:100%; border-radius:10px; margin:10px 0;" width="50" height="50">
+      <p>Perfect blend of milk and espresso.</p>
+    </div>
+    <div class="card">
+      <h3>Latte</h3>
+      <img src="https://static.vecteezy.com/system/resources/previews/059/246/545/non_2x/latte-isolated-on-transparent-background-free-png.png" alt="latte" style="width:100%; border-radius:10px; margin:10px 0;">
+      <p>Smooth and creamy coffee.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff;">
+  <h2>Why Choose Us</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>High Quality Beans</h3>
+      <p>We use only premium coffee beans.</p>
+    </div>
+    <div class="card">
+      <h3>Expert Baristas</h3>
+      <p>Professionally trained coffee makers.</p>
+    </div>
+    <div class="card">
+      <h3>Cozy Place</h3>
+      <p>Relax and enjoy your coffee time.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 HTBC Coffee Shop | WEBSITE 
+</footer>
+<script>
+const loader = document.getElementById("loader");
+
+// show loader on link click
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    // ignore empty or external links if you want
+    if (!href || href.startsWith("#")) return;
+
+    e.preventDefault();
+    loader.classList.add("show");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 800); // loading time
+  });
+});
+
+// hide loader when page loads
+window.addEventListener("load", () => {
+  loader.classList.remove("show");
+});
+</script>
+<script>
+const items = document.querySelectorAll(".card, .hero-image img");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+items.forEach(el => {
+  el.classList.add("reveal");
+  observer.observe(el);
+});
+</script>
+</body>
+</html>

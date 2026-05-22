@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<title>About Us - Heart Treat Brew Cafe</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+  color: #fff;
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 80px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+header h2 {
+  font-size: 24px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c89b6d;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #c89b6d;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a87e55;
+}
+
+/* CONTENT */
+.container {
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* SECTION */
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #c89b6d;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* IMAGE SECTION */
+.image-box {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  opacity: 0.9;
+}
+/* LOADER OVERLAY */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+/* SHOW LOADER */
+#loader.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SPINNER */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255,255,255,0.2);
+  border-top: 5px solid #c89b6d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loader p {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Heart Treat Brew Cafe</h2>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="ordernow.html" class="btn">Order Now</a>
+</header>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>About Our Cafe</h1>
+    <p>Crafting warm coffee moments since day one </p>
+  </div>
+
+  <!-- CONTENT CARDS -->
+  <div class="section">
+
+    <div class="card">
+      <h3>Our Story</h3>
+      <p>
+        Heart Treat Brew Cafe started with a simple dream to create a cozy space
+        where people can relax, connect, and enjoy high-quality coffee made with love.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to provide excellent customer service while promoting a warm and friendly community vibe. 
+        We strive to make every visit enjoyable by maintaining a comfortable ambiance, fast service, and affordable prices.
+
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Why Choose Us</h3>
+      <p>
+        Our coffee shop is a welcoming space designed to bring people together over high-quality coffee, delicious food, and a relaxing atmosphere. 
+        We aim to create a cozy and modern environment where customers can unwind, study, work, or connect with friends and family.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- IMAGE -->
+  <div class="image-box">
+    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb" alt="Cafe Image">
+  </div>
+
+</div>
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+<script>
+const loader = document.getElementById("loader");
+
+// show loader on link click
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    // ignore empty or external links if you want
+    if (!href || href.startsWith("#")) return;
+
+    e.preventDefault();
+    loader.classList.add("show");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 800); // loading time
+  });
+});
+
+// hide loader when page loads
+window.addEventListener("load", () => {
+  loader.classList.remove("show");
+});
+</script>
+</body>
+</html>
